@@ -32,7 +32,7 @@ function updateDockBadge()
                 {
                     count += parseInt(badge);
                 } else {
-                    // console.log("filtered: " + name)
+                    // console.log("filtered: " + name);
                 }
             }
         }
