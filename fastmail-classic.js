@@ -7,7 +7,6 @@ URL pattern: *fastmail.fm/html/*
 
 */
 
-window.fluid.dockBadge = "";
 setTimeout(updateDockBadge, 3000);
 setInterval(updateDockBadge, 10000);
 
@@ -15,10 +14,10 @@ var INBOX_ONLY = false;
 
 function updateDockBadge() {
     var badge = 0;
-    var tree = document.getElementsByClassName("overflow");
+    var tree = document.getElementsByClassName("folder");
     for (i = 0;  i < tree.length; i++)
     {
-        var folder = tree[i].childNodes[0].data;
+        var folder = tree[i].getElementsByClassName("overflow")[0].childNodes[0].data;
         // console.log(folder);
         
         if (! INBOX_ONLY || folder.match(/Inbox./))   // . match LEFT-TO-RIGHT MARK
