@@ -38,7 +38,7 @@ function updateDockBadge()
         }
     }
 
-    // console.log("new count: " + count ", current count: " + window.fluid.dockBadge);
+    // console.log("new count: " + count + ", current count: " + window.fluid.dockBadge);
     if (count > window.fluid.dockBadge)
     {
         notification = {
