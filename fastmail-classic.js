@@ -10,7 +10,8 @@ URL pattern: *fastmail.fm/html/*
 setTimeout(updateDockBadge, 3000);
 setInterval(updateDockBadge, 10000);
 
-var INBOX_ONLY = false;
+INBOX_ONLY = false;
+FILTERED = [ "Drafts", "Trash", "Junk Mail" ];
 
 function updateDockBadge() {
     var badge = 0;
@@ -22,18 +23,23 @@ function updateDockBadge() {
         
         if (! INBOX_ONLY || folder == "Inbox")
         {
-            var counts = tree[i].getElementsByClassName("messageCounts")[0].childNodes[0].data;
-            // console.log(counts);
-            
-            if (counts)
+            if (FILTERED.indexOf(folder) == -1)
             {
-                var res = counts.match(/ \((\d+)/);
+                var counts = tree[i].getElementsByClassName("messageCounts")[0].childNodes[0].data;
+                // console.log(counts);
                 
-                if (res && res.length > 1)
+                if (counts)
                 {
-                    // console.log(folder + ": " + res[1]);
-                    badge += parseInt(res[1]);
+                    var res = counts.match(/ \((\d+)/);
+                    
+                    if (res && res.length > 1)
+                    {
+                        // console.log(folder + ": " + res[1]);
+                        badge += parseInt(res[1]);
+                    }
                 }
+            } else {
+                // console.log("filtered: " + folder);
             }
         }
     }
