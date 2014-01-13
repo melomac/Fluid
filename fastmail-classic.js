@@ -17,10 +17,10 @@ function updateDockBadge() {
     var tree = document.getElementsByClassName("folder");
     for (i = 0;  i < tree.length; i++)
     {
-        var folder = tree[i].getElementsByClassName("overflow")[0].childNodes[0].data;
+        var folder = tree[i].getElementsByClassName("overflow")[0].childNodes[0].data.replace("\u200e","");
         // console.log(folder);
         
-        if (! INBOX_ONLY || folder.match(/Inbox./))   // . match LEFT-TO-RIGHT MARK
+        if (! INBOX_ONLY || folder == "Inbox")
         {
             var counts = tree[i].getElementsByClassName("messageCounts")[0].childNodes[0].data;
             // console.log(counts);
