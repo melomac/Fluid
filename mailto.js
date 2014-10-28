@@ -9,5 +9,5 @@ URL pattern: mailto:*
 
 function transform(inURLString)
 {
-	return "https://www.fastmail.fm/action/compose/?mailto=" + inURLString;
+	return "https://www.fastmail.com/action/compose/?mailto=" + inURLString;
 }

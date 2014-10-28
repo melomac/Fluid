@@ -3,7 +3,7 @@
 Fluid App Userscript
 
 FastMail classic web interface
-URL pattern: *fastmail.fm/html/*
+URL pattern: *fastmail.com/html/*
 
 */
 
