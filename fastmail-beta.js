@@ -17,11 +17,11 @@ function updateDockBadge()
 {
     var count = 0;
     
-    var tree = document.getElementsByClassName("FolderTree")[0];
+    var tree = document.getElementsByClassName("v-FolderTree")[0];
     for (i = 0;  i < tree.childNodes.length; i++)
     {
-        name = tree.childNodes[i].getElementsByClassName("name")[0].innerText;
-        badge = tree.childNodes[i].getElementsByClassName("badge")[0].innerText;
+        name = tree.childNodes[i].getElementsByClassName("v-FolderSource-name")[0].innerText;
+        badge = tree.childNodes[i].getElementsByClassName("v-FolderSource-badge")[0].innerText;
         // console.log("name: " + name + ", badge: " + badge);
         
         if (badge)
