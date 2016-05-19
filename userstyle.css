@@ -1,0 +1,17 @@
+/*
+
+Fluid App Userstyle
+
+FastMail web interface
+URL pattern: *fastmail.com/mail/*
+
+*/
+
+* {
+	font-family: "Helvetica Neue";
+}
+
+body {
+	font: 13px / 1.5 "-apple-system", "Helvetica Neue", sans-serif;
+	text-rendering: optimizeLegibility;
+}
