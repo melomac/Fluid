@@ -18,6 +18,10 @@ function updateDockBadge()
     var count = 0;
     
     var tree = document.getElementsByClassName("v-FolderTree")[0];
+    
+    if (!tree)
+        return;
+    
     for (i = 0;  i < tree.childNodes.length; i++)
     {
         name = tree.childNodes[i].getElementsByClassName("v-FolderSource-name")[0].innerText;
