@@ -47,14 +47,15 @@ function updateDockBadge()
     {
         notification = {
             title: "FastMail",
-            description: "You have " + count + " unread message(s)",
+            description: "You have " + count + " unread message" + ((count > 1) ? "s" : ""),
             priority: 1,
             sticky: false,
             identifier: "fastmail",
             icon: window.fluid.resourcePath + "appl.icns",
-            // icon: "https://www.fastmail.fm/static/favicons/touch-icon-196x196.png",
+            // icon: "https://www.fastmail.com/static/favicons/touch-icon-196x196.png",
         };
-        window.fluid.showGrowlNotification(notification);
+        // window.fluid.showGrowlNotification(notification);
+        window.fluid.showUserNotification(notification);
         window.fluid.dockBadge = count;
     } else if (count > 0) {
         window.fluid.dockBadge = count;
